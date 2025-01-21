@@ -11,6 +11,7 @@ import VerifyEmail from "./pages/VerifyEmail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Scroll_To_Top_Button from "./utils/Scroll_To_Top_Button"
+import Dashboard from './pages/Dashboard'
 
 
 function App() {
@@ -75,7 +76,7 @@ function App() {
         />
         <Route path="/contact" element={<Contact />} />
 
-        {/* <Route
+        <Route
           element={
             <PrivateRoute>
               <Dashboard />
@@ -86,9 +87,8 @@ function App() {
 
           <Route path="dashboard/Settings" element={<Settings />} />
 
-
           {
-            user?.accountType === ACCOUNT_TYPE.STUDENT && (
+            user?.accountType === ACCOUNT_TYPE.BUYER && (
               <>
                 <Route path="dashboard/cart" element={<Cart />} />
                 <Route path="dashboard/enrolled-courses" element={<EnrolledCourses />} />
@@ -97,7 +97,7 @@ function App() {
           }
 
           {
-            user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
+            user?.accountType === ACCOUNT_TYPE.ARTIST && (
               <>
                 <Route path="dashboard/instructor" element={<Instructor />} />
                 <Route path="dashboard/add-course" element={<AddCourse />} />
@@ -109,7 +109,7 @@ function App() {
           }
 
 
-        </Route> */}
+        </Route>
 
 
         {/* <Route element={

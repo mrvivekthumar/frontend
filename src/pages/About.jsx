@@ -25,13 +25,10 @@ const About = () => {
             <section className="bg-richblack-700">
                 <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-center text-white">
                     <header data-aos="zoom-in" className="mx-auto py-20 text-4xl font-semibold lg:w-[70%]">
-                        Driving Innovation in Online Education for a
-                        <HighlightText text={"Brighter Future"} />
+                        Transforming the World of Art for a
+                        <HighlightText text={"Creative Future"} />
                         <p data-aos="zoom-in-down" className="mx-auto mt-3 text-center text-base font-medium text-richblack-300 lg:w-[95%]">
-                            Studynotion is at the forefront of driving innovation in online
-                            education. We're passionate about creating a brighter future by
-                            offering cutting-edge courses, leveraging emerging technologies,
-                            and nurturing a vibrant learning community.
+                            ArtistryHub is leading the way in revolutionizing the art-selling experience. We're passionate about shaping a creative future by showcasing exceptional artwork, leveraging innovative technology, and building a thriving community of art enthusiasts.
                         </p>
                     </header>
                     <div className="sm:h-[70px] lg:h-[150px]"></div>
@@ -59,20 +56,10 @@ const About = () => {
                                 Our Founding Story
                             </h1>
                             <p className="text-base font-medium text-richblack-300 lg:w-[95%]">
-                                Our e-learning platform was born out of a shared vision and
-                                passion for transforming education. It all began with a group of
-                                educators, technologists, and lifelong learners who recognized
-                                the need for accessible, flexible, and high-quality learning
-                                opportunities in a rapidly evolving digital world.
+                                Our art-selling platform was born out of a shared vision and passion for transforming the way people experience and acquire art. It all began with a group of artists, curators, and art enthusiasts who recognized the need for accessible, diverse, and high-quality art in a rapidly evolving digital world.
                             </p>
                             <p className="text-base font-medium text-richblack-300 lg:w-[95%]">
-                                As experienced educators ourselves, we witnessed firsthand the
-                                limitations and challenges of traditional education systems. We
-                                believed that education should not be confined to the walls of a
-                                classroom or restricted by geographical boundaries. We
-                                envisioned a platform that could bridge these gaps and empower
-                                individuals from all walks of life to unlock their full
-                                potential.
+                                As passionate art lovers ourselves, we witnessed firsthand the barriers and challenges of traditional art markets. We believed that art should not be limited to galleries or restricted by geographical boundaries. We envisioned a platform that could bridge these gaps and connect individuals from all walks of life to the beauty and inspiration of art.
                             </p>
                         </div>
 
@@ -90,12 +77,7 @@ const About = () => {
                                 Our Vision
                             </h1>
                             <p className="text-base font-medium text-richblack-300 lg:w-[95%]">
-                                With this vision in mind, we set out on a journey to create an
-                                e-learning platform that would revolutionize the way people
-                                learn. Our team of dedicated experts worked tirelessly to
-                                develop a robust and intuitive platform that combines
-                                cutting-edge technology with engaging content, fostering a
-                                dynamic and interactive learning experience.
+                                With this vision in mind, we embarked on a journey to create a platform that would revolutionize the way people discover and acquire art. Our team of passionate experts worked tirelessly to develop a seamless and intuitive platform that combines innovative technology with a curated collection of exceptional artworks, fostering a vibrant and inspiring art experience for everyone.
                             </p>
                         </div>
                         <div className="my-24 flex lg:w-[40%] flex-col gap-10">
@@ -103,7 +85,7 @@ const About = () => {
                                 Our Mission
                             </h1>
                             <p className="text-base font-medium text-richblack-300 lg:w-[95%]">
-                                Our mission goes beyond just delivering courses online. We wanted to create a vibrant community of learners, where individuals can connect, collaborate, and learn from one another. We believe that knowledge thrives in an environment of sharing and dialogue, and we foster this spirit of collaboration through forums, live sessions, and networking opportunities.
+                                Our mission goes beyond just showcasing and selling art. We aim to create a vibrant community of art lovers and creators, where individuals can connect, collaborate, and inspire one another. We believe that creativity thrives in an environment of sharing and dialogue, and we foster this spirit of collaboration through artist features, live exhibitions, and interactive events.
                             </p>
                         </div>
                     </div>

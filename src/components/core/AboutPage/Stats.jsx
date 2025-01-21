@@ -2,9 +2,9 @@ import React from "react";
 import CountUp from "react-countup";
 
 const Stats = [
-    { count: "500", label: "Active Students" },
+    { count: "500", label: "Active Artist" },
     { count: "10", label: "Mentors" },
-    { count: "100", label: "Courses" },
+    { count: "100", label: "Buyers" },
     { count: "50", label: "Ratings" },
 ];
 

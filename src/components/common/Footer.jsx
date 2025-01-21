@@ -1,26 +1,27 @@
 import React from "react";
-import { FooterLink2 } from "../../data/footer-links";
+import { FooterLink2 } from "../../data/footer-links"; // Make sure to update the data with art-related links
 import { Link } from "react-router-dom";
 
 // Images
-import Logo from "../../assets/Logo/Logo.png"
+import Logo from "../../assets/Logo/Logo.png";
 
 // Icons
 import { FaFacebook, FaGoogle, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
 const Resources = [
-    "Articles",
-    "Blog",
-    "Chart Sheet",
-    "Code challenges",
-    "Docs",
+    "Art Articles",
+    "Art Blog",
+    "Art Exhibitions",
+    "Art Tutorials",
+    "Art Docs",
+    "Gallery",
     "Projects",
-    "Videos",
-    "Workspaces",
+    "Art Videos",
+    "Workshops",
 ];
-const Plans = ["Paid memberships", "For students", "Business solutions"];
-const Community = ["Forums", "Chapters", "Events"];
+const Plans = ["Memberships", "For Artists", "Art Business Solutions"];
+const Community = ["Art Forums", "Art Chapters", "Art Events"];
 
 const Footer = () => {
     return (
@@ -30,7 +31,7 @@ const Footer = () => {
                     {/* Section 1 */}
                     <div className="lg:w-[50%] flex flex-wrap flex-row justify-between lg:border-r lg:border-richblack-700 pl-3 lg:pr-5 gap-3">
                         <div className="w-[30%] flex flex-col gap-3 lg:w-[30%] mb-7 lg:pl-0">
-                            <img src={Logo} alt="" className="object-contain" />
+                            <img src={Logo} alt="Logo" className="object-contain" />
                             <h1 className="text-richblack-50 font-semibold text-[16px]">
                                 Company
                             </h1>
@@ -52,7 +53,6 @@ const Footer = () => {
                                 <FaTwitter />
                                 <FaYoutube />
                             </div>
-                            <div></div>
                         </div>
 
                         <div className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
@@ -102,6 +102,7 @@ const Footer = () => {
                                     );
                                 })}
                             </div>
+
                             <h1 className="text-richblack-50 font-semibold text-[16px] mt-7">
                                 Community
                             </h1>
@@ -150,7 +151,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="flex flex-row items-center justify-between w-11/12 max-w-maxContent text-richblack-400 mx-auto  pb-14 text-sm">
+            <div className="flex flex-row items-center justify-between w-11/12 max-w-maxContent text-richblack-400 mx-auto pb-14 text-sm">
                 {/* Section 1 */}
                 <div className="flex justify-between lg:items-start items-center flex-col lg:flex-row gap-3 w-full">
                     <div className="flex flex-row">
@@ -171,7 +172,7 @@ const Footer = () => {
                         })}
                     </div>
 
-                    <div className="text-center">Skill Sync ❤️ Made For Learning</div>
+                    <div className="text-center">Art Sphere ❤️ Made For Artists</div>
                 </div>
             </div>
         </div>

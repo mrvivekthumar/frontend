@@ -5,42 +5,42 @@ import CTAButton from "../../../components/core/HomePage/Button";
 const LearningGridArray = [
     {
         order: -1,
-        heading: "World-Class Learning for",
-        highlightText: "Anyone, Anywhere",
+        heading: "World-Class Art for ",
+        highlightText: "Everyone, Everywhere",
         description:
-            "Studynotion partners with more than 275+ leading universities and companies to bring flexible, affordable, job-relevant online learning to individuals and organizations worldwide.",
-        BtnText: "Learn More",
+            "ArtistryHub collaborates with talented artists and renowned galleries to bring accessible, diverse, and high-quality art collections to individuals and organizations across the globe.",
+        BtnText: "Explore More",
         BtnLink: "/",
     },
     {
         order: 1,
-        heading: "Curriculum Based on Industry Needs",
+        heading: "Art Collections Aligned with Trends",
         description:
-            "Save time and money! The Belajar curriculum is made to be easier to understand and in line with industry needs.",
+            "Save time and effort! Our curated art collections are designed to reflect current trends and cater to the tastes of modern art enthusiasts.",
     },
     {
         order: 2,
-        heading: "Our Learning Methods",
+        heading: "Our Approach to Art",
         description:
-            "Studynotion partners with more than 275+ leading universities and companies to bring",
+            "ArtistryHub collaborates with talented artists and prestigious galleries to bring you a diverse selection of stunning artwork, making art accessible and inspiring for everyone.",
     },
     {
         order: 3,
-        heading: "Certification",
+        heading: "Authenticity Guaranteed",
         description:
-            "Studynotion partners with more than 275+ leading universities and companies to bring",
+            "ArtistryHub collaborates with renowned artists and galleries to ensure every piece of art is authentic, certified, and a true masterpiece for your collection",
     },
     {
         order: 4,
-        heading: `Rating "Auto-grading"`,
+        heading: "Art Ratings",
         description:
-            "Studynotion partners with more than 275+ leading universities and companies to bring",
+            "ArtistryHub collaborates with art critics and enthusiasts to provide ratings and reviews, helping you discover highly acclaimed and exceptional artwork with ease.",
     },
     {
         order: 5,
-        heading: "Ready to Work",
+        heading: "Ready to Collect",
         description:
-            "Studynotion partners with more than 275+ leading universities and companies to bring",
+            "ArtistryHub partners with top artists and galleries to bring you exclusive, ready-to-purchase artworks that are perfect for any collection.",
     },
 ];
 
