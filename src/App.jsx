@@ -12,16 +12,26 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Scroll_To_Top_Button from "./utils/Scroll_To_Top_Button"
 import Dashboard from './pages/Dashboard'
+import PrivateRoute from "../src/components/core/Auth/PrivateRoute"
+import MyProfile from './components/core/Dashboard/MyProfile'
+import Settings from './components/core/Dashboard/Settings'
+import Cart from './components/core/Dashboard/Cart'
+import EnrolledCourses from './components/core/Dashboard/EnrolledArtImages'
+import { useSelector } from 'react-redux'
+import { ACCOUNT_TYPE } from "./utils/constants";
+import Catalog from './pages/Catalog'
 
 
 function App() {
+
+  const { user } = useSelector((state) => state.profile)
 
   return (
     <div className='w-screen min-h-screen bg-background flex flex-col font-inter relative'>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="catalog/:catalogName" element={<Catalog />} /> */}
+        <Route path="catalog/:catalogName" element={<Catalog />} />
         {/* <Route path="courses/:courseId" element={<CourseDetails />} /> */}
 
         <Route
@@ -96,17 +106,17 @@ function App() {
             )
           }
 
-          {
+          {/* {
             user?.accountType === ACCOUNT_TYPE.ARTIST && (
               <>
                 <Route path="dashboard/instructor" element={<Instructor />} />
-                <Route path="dashboard/add-course" element={<AddCourse />} />
-                <Route path="dashboard/my-courses" element={<MyCourses />} />
+                <Route path="dashboard/add-images" element={<AddCourse />} />
+                <Route path="dashboard/my-images" element={<MyCourses />} />
                 <Route path="dashboard/edit-course/:courseId" element={<EditCourse />} />
 
               </>
             )
-          }
+          } */}
 
 
         </Route>

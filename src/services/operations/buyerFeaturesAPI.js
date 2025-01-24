@@ -1,12 +1,12 @@
 import { toast } from "react-hot-toast";
-import { studentEndpoints } from "../api";
+import { buyerEndpoints } from "../api";
 import { apiConnector } from "../apiConnector";
 import rzpLogo from "../../assets/Logo/rzp_logo.png"
-import { setPaymentLoading } from "../../slices/courseSlice";
+import { setPaymentLoading } from "../../slices/artImageSlice";
 import { resetCart } from "../../slices/cartSlice";
 
 
-const { COURSE_PAYMENT_API, COURSE_VERIFY_API, SEND_PAYMENT_SUCCESS_EMAIL_API } = studentEndpoints;
+const { ARTIMAGE_PAYMENT_API, ARTIMAGE_VERIFY_API, SEND_PAYMENT_SUCCESS_EMAIL_API } = buyerEndpoints;
 
 function loadScript(src) {
     return new Promise((resolve) => {
@@ -24,7 +24,7 @@ function loadScript(src) {
 }
 
 
-export async function buyCourse(token, courses, userDetails, navigate, dispatch) {
+export async function buyArtImage(token, artImages, userDetails, navigate, dispatch) {
     const toastId = toast.loading("Loading...");
     try {
         //load the script
@@ -36,8 +36,8 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
         }
 
         //initiate the order
-        const orderResponse = await apiConnector("POST", COURSE_PAYMENT_API,
-            { courses },
+        const orderResponse = await apiConnector("POST", ARTIMAGE_PAYMENT_API,
+            { artImages },
             {
                 Authorization: `Bearer ${token}`,
             })
@@ -53,7 +53,7 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
             amount: `${orderResponse.data.message.amount}`,
             order_id: orderResponse.data.message.id,
             name: "StudyNotion",
-            description: "Thank You for Purchasing the Course",
+            description: "Thank You for Purchasing the ArtImage",
             image: rzpLogo,
             prefill: {
                 name: `${userDetails.firstName}`,
@@ -63,7 +63,7 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
                 //send successful wala mail
                 sendPaymentSuccessEmail(response, orderResponse.data.message.amount, token);
                 //verifyPayment
-                verifyPayment({ ...response, courses }, token, navigate, dispatch);
+                verifyPayment({ ...response, artImages }, token, navigate, dispatch);
             }
         }
         //miss hogya tha 
@@ -102,15 +102,15 @@ async function verifyPayment(bodyData, token, navigate, dispatch) {
     const toastId = toast.loading("Verifying Payment....");
     dispatch(setPaymentLoading(true));
     try {
-        const response = await apiConnector("POST", COURSE_VERIFY_API, bodyData, {
+        const response = await apiConnector("POST", ARTIMAGE_VERIFY_API, bodyData, {
             Authorization: `Bearer ${token}`,
         })
 
         if (!response.data.success) {
             throw new Error(response.data.message);
         }
-        toast.success("payment Successful, ypou are addded to the course");
-        navigate("/dashboard/enrolled-courses");
+        toast.success("payment Successful, ypou are addded to the artImage");
+        navigate("/dashboard/enrolled-artImages");
         dispatch(resetCart());
     }
     catch (error) {

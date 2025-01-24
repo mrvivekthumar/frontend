@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 
 import IconBtn from "../../../common/IconBtn"
-import { buyCourse } from "../../../../services/operations/studentFeaturesAPI"
+import { buyArtImage } from "../../../../services/operations/buyerFeaturesAPI"
 
 export default function RenderTotalAmount() {
     const { total, cart } = useSelector((state) => state.cart)
@@ -11,9 +11,9 @@ export default function RenderTotalAmount() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
-    const handleBuyCourse = () => {
-        const courses = cart.map((course) => course._id)
-        buyCourse(token, courses, user, navigate, dispatch)
+    const handleBuyArtImage = () => {
+        const artImages = cart.map((artImage) => artImage._id)
+        buyArtImage(token, artImages, user, navigate, dispatch)
     }
 
     return (
@@ -22,11 +22,11 @@ export default function RenderTotalAmount() {
             <p className="mb-6 text-3xl font-medium text-yellow-100">₹ {total}</p>
             {/* <IconBtn
         text="Buy Now"
-        onclick={handleBuyCourse}
+        onclick={handleBuyArtImage}
         customClasses="w-full bg-yellow-50 justify-center"
       /> */}
 
-            <button onClick={handleBuyCourse} className="bg-yellow-50 font-semibold rounded-md px-3 py-2">
+            <button onClick={handleBuyArtImage} className="bg-yellow-50 font-semibold rounded-md px-3 py-2">
                 Buy Now
             </button>
         </div>

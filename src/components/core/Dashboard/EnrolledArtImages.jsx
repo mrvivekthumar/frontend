@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 import { getUserEnrolledCourses } from "../../../services/operations/profileAPI"
 
-export default function EnrolledCourses() {
+export default function EnrolledArtImages() {
     const { token } = useSelector((state) => state.auth)
     const navigate = useNavigate()
 
@@ -46,7 +46,7 @@ export default function EnrolledCourses() {
                     </div>
 
                     {/* Course Names */}
-                    
+
                     {enrolledCourses.map((course, i, arr) => (
                         <div
                             className={`flex items-center border border-richblack-700 ${i === arr.length - 1 ? "rounded-b-lg" : "rounded-none"

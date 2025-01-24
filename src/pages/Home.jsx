@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import React, { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Banner from "../assets/Images/banner.mp4"
+// import Banner from "../assets/Images/banner.mp4"
 import Footer from "../components/common/Footer"
 import CTAButton from "../components/core/HomePage/Button"
 import CodeBlocks from "../components/core/HomePage/CodeBlocks"
@@ -70,7 +70,7 @@ function Home() {
                         loop
                         autoPlay
                     >
-                        <source src={Banner} type="video/mp4" />
+                        {/* <source src={Banner} type="video/mp4" /> */}
                     </video>
                 </div>
 

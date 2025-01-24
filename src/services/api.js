@@ -13,56 +13,56 @@ export const endpoints = {
 // PROFILE ENDPOINTS
 export const profileEndpoints = {
     GET_USER_DETAILS_API: BASE_URL + "/profile/getUserDetails",
-    // GET_USER_ENROLLED_COURSES_API: BASE_URL + "/profile/getEnrolledCourses",
+    // GET_USER_ENROLLED_ARTIMAGES_API: BASE_URL + "/profile/getEnrolledArtImages",
     GET_ARTIST_DATA_API: BASE_URL + "/profile/artistDashboard",
 }
 
 // BUYERS ENDPOINTS
-export const studentEndpoints = {
+export const buyerEndpoints = {
     ARTIMAGE_PAYMENT_API: BASE_URL + "/payment/capturePayment",
     ARTIMAGE_VERIFY_API: BASE_URL + "/payment/verifyPayment",
     SEND_PAYMENT_SUCCESS_EMAIL_API: BASE_URL + "/payment/sendPaymentSuccessEmail",
 }
 
 // ARTIMAGES ENDPOINTS
-export const courseEndpoints = {
+export const artImageEndpoints = {
 
-    CREATE_ARTIMAGE_API: BASE_URL + "/artimage/createArtImage",
-    EDIT_ARTIMAGE_API: BASE_URL + "/artimage/editArtImages",
-    DELETE_ARTIMAGE_API: BASE_URL + "/artimage/deleteArtistImages",
-    GET_ALL_ARTIMAGE_API: BASE_URL + "/artimage/getAllArtImages",
-    COURSE_ARTIMAGE_API: BASE_URL + "/artimage/getArtImage",
+    CREATE_ARTIMAGE_API: BASE_URL + "/artImage/createArtImage",
+    EDIT_ARTIMAGE_API: BASE_URL + "/artImage/editArtImages",
+    DELETE_ARTIMAGE_API: BASE_URL + "/artImage/deleteArtistImages",
+    GET_ALL_ARTIMAGE_API: BASE_URL + "/artImage/getAllArtImages",
+    ARTIMAGE_API: BASE_URL + "/artImage/getArtImage",
 
-    ARTIMAGE_CATEGORIES_API: BASE_URL + "/artimage/showAllCategories",
+    ARTIMAGE_CATEGORIES_API: BASE_URL + "/artImages/showAllCategories",
 
-    // CREATE_SECTION_API: BASE_URL + "/course/addSection",
-    // CREATE_SUBSECTION_API: BASE_URL + "/course/addSubSection",
-    // UPDATE_SECTION_API: BASE_URL + "/course/updateSection",
-    // UPDATE_SUBSECTION_API: BASE_URL + "/course/updateSubSection",
-    // DELETE_SECTION_API: BASE_URL + "/course/deleteSection",
-    // DELETE_SUBSECTION_API: BASE_URL + "/course/deleteSubSection",
+    // CREATE_SECTION_API: BASE_URL + "/artImage/addSection",
+    // CREATE_SUBSECTION_API: BASE_URL + "/artImage/addSubSection",
+    // UPDATE_SECTION_API: BASE_URL + "/artImage/updateSection",
+    // UPDATE_SUBSECTION_API: BASE_URL + "/artImage/updateSubSection",
+    // DELETE_SECTION_API: BASE_URL + "/artImage/deleteSection",
+    // DELETE_SUBSECTION_API: BASE_URL + "/artImage/deleteSubSection",
 
-    GET_ALL_ARTIST_ARTIMAGE_API: BASE_URL + "/artimage/getArtistArtImages",
-    CREATE_RATING_API: BASE_URL + "/artimage/createRating",
+    GET_ALL_ARTIST_ARTIMAGE_API: BASE_URL + "/artImages/getArtistArtImages",
+    CREATE_RATING_API: BASE_URL + "/artImages/createRating",
 
-    // GET_FULL_COURSE_DETAILS_AUTHENTICATED: BASE_URL + "/course/getFullCourseDetails",
-    // LECTURE_COMPLETION_API: BASE_URL + "/course/updateCourseProgress",
+    // GET_FULL_ARTIMAGE_DETAILS_AUTHENTICATED: BASE_URL + "/artImage/getFullArtImageDetails",
+    // LECTURE_COMPLETION_API: BASE_URL + "/artImage/updateArtImageProgress",
 
 }
 
 // RATINGS AND REVIEWS
 export const ratingsEndpoints = {
-    REVIEWS_DETAILS_API: BASE_URL + "/artimage/getReviews",
+    REVIEWS_DETAILS_API: BASE_URL + "/artImages/getReviews",
 }
 
 // CATAGORIES API
 export const categories = {
-    CATEGORIES_API: BASE_URL + "/artimage/showAllCategories",
+    CATEGORIES_API: BASE_URL + "/artImages/showAllCategories",
 }
 
 // CATALOG PAGE DATA
 export const catalogData = {
-    CATALOGPAGEDATA_API: BASE_URL + "/artimage/getCategoryPageDetails",
+    CATALOGPAGEDATA_API: BASE_URL + "/artImages/getCategoryPageDetails",
 }
 // CONTACT-US API
 export const contactusEndpoint = {

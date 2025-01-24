@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 import { apiConnector } from '../services/apiConnector';
 import { categories } from '../services/api';
 import { getCatalogaPageData } from '../services/operations/pageAndComponentData';
-import Course_Card from '../components/core/Catalog/CourseCard';
-import CourseSlider from '../components/core/Catalog/CourseSlider';
+import ArtImage_Card from '../components/core/Catalog/ArtImageCard';
+import ArtImageSlider from '../components/core/Catalog/ArtImageSlider';
 import { useSelector } from "react-redux"
 import Error from "./Error"
 
@@ -79,7 +79,7 @@ const Catalog = () => {
 
             {/* Section 1 */}
             <div className=" mx-auto box-content w-full max-w-maxContentTab px-4 py-12 lg:max-w-maxContent">
-                <div className="section_heading">Courses to get you started</div>
+                <div className="section_heading">ArtImages to get you started</div>
                 <div className="my-4 flex border-b border-b-richblack-600 text-sm">
                     <p
                         className={`px-4 py-2 ${active === 1
@@ -101,19 +101,19 @@ const Catalog = () => {
                     </p>
                 </div>
                 <div>
-                    <CourseSlider
-                        Courses={catalogPageData?.data?.selectedCategory?.courses}
+                    <ArtImageSlider
+                        ArtImages={catalogPageData?.data?.selectedCategory?.artImages}
                     />
                 </div>
             </div>
             {/* Section 2 */}
             <div className=" mx-auto box-content w-full max-w-maxContentTab px-4 py-12 lg:max-w-maxContent">
                 <div className="section_heading">
-                    Top courses in {catalogPageData?.data?.differentCategory?.name}
+                    Top artImages in {catalogPageData?.data?.differentCategory?.name}
                 </div>
                 <div className="py-8">
-                    <CourseSlider
-                        Courses={catalogPageData?.data?.differentCategory?.courses}
+                    <ArtImageSlider
+                        ArtImages={catalogPageData?.data?.differentCategory?.artImages}
                     />
                 </div>
             </div>
@@ -123,10 +123,10 @@ const Catalog = () => {
                 <div className="section_heading">Frequently Bought</div>
                 <div className="py-8">
                     <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                        {catalogPageData?.data?.mostSellingCourses
+                        {catalogPageData?.data?.mostSellingArtImages
                             ?.slice(0, 4)
-                            .map((course, i) => (
-                                <Course_Card course={course} key={i} Height={"h-[400px]"} />
+                            .map((artImage, i) => (
+                                <ArtImage_Card artImage={artImage} key={i} Height={"h-[400px]"} />
                             ))}
                     </div>
                 </div>

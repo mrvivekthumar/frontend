@@ -5,18 +5,18 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 
-import CourseCard from './CourseCard';
+import ArtImage_Card from './ArtImageCard';
 
-const CourseSlider = ({ Courses, Reviews }) => {
-    const renderCourses = () => {
-        if (Courses.length) {
+const ArtImageSlider = ({ ArtImages, Reviews }) => {
+    const renderArtImages = () => {
+        if (ArtImages.length) {
             return (
                 <Swiper
                     navigation={true}
                     slidesPerView={1}
                     spaceBetween={25}
                     pagination={true}
-                    loop={Courses.length > 1}
+                    loop={ArtImages.length > 1}
                     modules={[FreeMode, Pagination, Autoplay]}
                     breakpoints={{
                         1024: {
@@ -25,15 +25,15 @@ const CourseSlider = ({ Courses, Reviews }) => {
                     }}
                     className="max-h-[30rem] mx-auto"
                 >
-                    {Courses.map((course, i) => (
+                    {ArtImages.map((image, i) => (
                         <SwiperSlide key={i}>
-                            <CourseCard course={course} Height={"h-[230px]  md:h-[250px]"} />
+                            <ArtImage_Card artImage={image} Height={"h-[230px]  md:h-[250px]"} />
                         </SwiperSlide>
                     ))}
                 </Swiper>
             );
         } else {
-            return <p className="text-xl text-richblack-5">No Course Found</p>;
+            return <p className="text-xl text-richblack-5">No ArtImage Found</p>;
         }
     };
 
@@ -67,10 +67,10 @@ const CourseSlider = ({ Courses, Reviews }) => {
 
     return (
         <>
-            {renderCourses()}
+            {renderArtImages()}
             {renderReviews()}
         </>
     );
 };
 
-export default CourseSlider;
+export default ArtImageSlider;

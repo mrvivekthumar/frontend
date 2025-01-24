@@ -9,22 +9,22 @@ export const sidebarLinks = [
     {
         id: 2,
         name: "Dashboard",
-        path: "/dashboard/instructor",
-        type: ACCOUNT_TYPE.INSTRUCTOR,
+        path: "/dashboard/artist",
+        type: ACCOUNT_TYPE.ARTIST,
         icon: "VscDashboard",
     },
     {
         id: 3,
         name: "My Courses",
-        path: "/dashboard/my-courses",
-        type: ACCOUNT_TYPE.INSTRUCTOR,
+        path: "/dashboard/my-images",
+        type: ACCOUNT_TYPE.ARTIST,
         icon: "VscVm",
     },
     {
         id: 4,
         name: "Add Courses",
-        path: "/dashboard/add-course",
-        type: ACCOUNT_TYPE.INSTRUCTOR,
+        path: "/dashboard/add-images",
+        type: ACCOUNT_TYPE.ARTIST,
         icon: "VscAdd",
     },
     {
