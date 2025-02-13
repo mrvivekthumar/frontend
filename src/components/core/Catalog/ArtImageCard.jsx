@@ -14,7 +14,7 @@ const ArtImage_Card = ({ artImage, Height }) => {
 
     return (
         <>
-            <Link to={`/artImage/${artImage._id}`}>
+            <Link to={`/artImages/${artImage._id}`}>
                 <div className="">
                     <div className="rounded-lg">
                         <img

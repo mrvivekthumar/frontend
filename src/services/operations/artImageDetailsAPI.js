@@ -10,10 +10,9 @@ const {
     ARTIMAGE_API,
     ARTIMAGE_CATEGORIES_API,
     GET_ALL_ARTIST_ARTIMAGE_API,
+    ARTIMAGE_DETAILS_API,
     CREATE_RATING_API
-
-
-} = courseEndpoints
+} = artImageEndpoints
 
 export const getAllArtImages = async () => {
     const toastId = toast.loading("Loading...")
@@ -37,17 +36,17 @@ export const fetchArtImageDetails = async (artImageId) => {
     //   dispatch(setLoading(true));
     let result = null
     try {
-        const response = await apiConnector("POST", COURSE_DETAILS_API, {
+        const response = await apiConnector("POST", ARTIMAGE_API, {
             artImageId,
         })
-        console.log("COURSE_DETAILS_API API RESPONSE............", response)
+        console.log("ARTIMAGE_API API RESPONSE............", response)
 
         if (!response.data.success) {
             throw new Error(response.data.message)
         }
         result = response.data
     } catch (error) {
-        console.log("COURSE_DETAILS_API API ERROR............", error)
+        console.log("ARTIMAGE_DETAILS_API API ERROR............", error)
         result = error.response.data
         toast.error(error.response.data.message);
     }
@@ -56,7 +55,7 @@ export const fetchArtImageDetails = async (artImageId) => {
     return result
 }
 
-// fetching the available course categories
+// fetching the available artImage categories
 export const fetchArtImageCategories = async () => {
     let result = []
     try {
@@ -76,7 +75,7 @@ export const fetchArtImageCategories = async () => {
     return result
 }
 
-// add the course details
+// add the artImage details
 export const addArtImageDetails = async (data, token) => {
     let result = null
     const toastId = toast.loading("Loading...")
@@ -99,7 +98,7 @@ export const addArtImageDetails = async (data, token) => {
     return result
 }
 
-// edit the course details
+// edit the artImage details
 export const editArtImageDetails = async (data, token) => {
     let result = null
     const toastId = toast.loading("Loading...")
@@ -253,7 +252,7 @@ export const deleteSection = async (data, token) => {
 //     return result
 // }
 
-// fetching all courses under a specific instructor
+// fetching all artImages under a specific artist
 export const fetchArtistArtImages = async (token) => {
     let result = []
     const toastId = toast.loading("Loading...")
@@ -279,7 +278,7 @@ export const fetchArtistArtImages = async (token) => {
     return result
 }
 
-// delete a course
+// delete a artImage
 export const deleteArtImage = async (data, token) => {
     const toastId = toast.loading("Loading...")
     try {
@@ -298,7 +297,7 @@ export const deleteArtImage = async (data, token) => {
     toast.dismiss(toastId)
 }
 
-// get full details of a course
+// get full details of a artImage
 export const getFullDetailsOfArtImage = async (artImageId, token) => {
     const toastId = toast.loading("Loading...")
     //   dispatch(setLoading(true));
@@ -358,7 +357,7 @@ export const markLectureAsComplete = async (data, token) => {
     return result
 }
 
-// create a rating for course
+// create a rating for artImage
 export const createRating = async (data, token) => {
     const toastId = toast.loading("Loading...")
     let success = false

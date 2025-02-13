@@ -27,26 +27,26 @@ export const buyerEndpoints = {
 // ARTIMAGES ENDPOINTS
 export const artImageEndpoints = {
 
-    CREATE_ARTIMAGE_API: BASE_URL + "/artImage/createArtImage",
-    EDIT_ARTIMAGE_API: BASE_URL + "/artImage/editArtImages",
-    DELETE_ARTIMAGE_API: BASE_URL + "/artImage/deleteArtistImages",
-    GET_ALL_ARTIMAGE_API: BASE_URL + "/artImage/getAllArtImages",
-    ARTIMAGE_API: BASE_URL + "/artImage/getArtImage",
+    CREATE_ARTIMAGE_API: BASE_URL + "/artImages/createArtImage",
+    EDIT_ARTIMAGE_API: BASE_URL + "/artImages/editArtImages",
+    DELETE_ARTIMAGE_API: BASE_URL + "/artImages/deleteArtistImages",
+    GET_ALL_ARTIMAGE_API: BASE_URL + "/artImages/getAllArtImages",
+    ARTIMAGE_API: BASE_URL + "/artImages/getArtImage",
+    ARTIMAGE_DETAILS_API: BASE_URL + "/artImages/getArtImageDetails",
+    ARTIMAGE_CATEGORIES_API: BASE_URL + "/artImagess/showAllCategories",
 
-    ARTIMAGE_CATEGORIES_API: BASE_URL + "/artImages/showAllCategories",
-
-    // CREATE_SECTION_API: BASE_URL + "/artImage/addSection",
-    // CREATE_SUBSECTION_API: BASE_URL + "/artImage/addSubSection",
-    // UPDATE_SECTION_API: BASE_URL + "/artImage/updateSection",
-    // UPDATE_SUBSECTION_API: BASE_URL + "/artImage/updateSubSection",
-    // DELETE_SECTION_API: BASE_URL + "/artImage/deleteSection",
-    // DELETE_SUBSECTION_API: BASE_URL + "/artImage/deleteSubSection",
+    // CREATE_SECTION_API: BASE_URL + "/artImages/addSection",
+    // CREATE_SUBSECTION_API: BASE_URL + "/artImages/addSubSection",
+    // UPDATE_SECTION_API: BASE_URL + "/artImages/updateSection",
+    // UPDATE_SUBSECTION_API: BASE_URL + "/artImages/updateSubSection",
+    // DELETE_SECTION_API: BASE_URL + "/artImages/deleteSection",
+    // DELETE_SUBSECTION_API: BASE_URL + "/artImages/deleteSubSection",
 
     GET_ALL_ARTIST_ARTIMAGE_API: BASE_URL + "/artImages/getArtistArtImages",
     CREATE_RATING_API: BASE_URL + "/artImages/createRating",
 
-    // GET_FULL_ARTIMAGE_DETAILS_AUTHENTICATED: BASE_URL + "/artImage/getFullArtImageDetails",
-    // LECTURE_COMPLETION_API: BASE_URL + "/artImage/updateArtImageProgress",
+    // GET_FULL_ARTIMAGE_DETAILS_AUTHENTICATED: BASE_URL + "/artImages/getFullArtImageDetails",
+    // LECTURE_COMPLETION_API: BASE_URL + "/artImages/updateArtImageProgress",
 
 }
 

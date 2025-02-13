@@ -4,6 +4,8 @@ import { apiConnector } from "../apiConnector";
 import rzpLogo from "../../assets/Logo/rzp_logo.png"
 import { setPaymentLoading } from "../../slices/artImageSlice";
 import { resetCart } from "../../slices/cartSlice";
+import.meta.env.RAZORPAY_KEY
+
 
 
 const { ARTIMAGE_PAYMENT_API, ARTIMAGE_VERIFY_API, SEND_PAYMENT_SUCCESS_EMAIL_API } = buyerEndpoints;
@@ -48,7 +50,7 @@ export async function buyArtImage(token, artImages, userDetails, navigate, dispa
         console.log("PRINTING orderResponse", orderResponse);
         //options
         const options = {
-            key: process.env.RAZORPAY_KEY,
+            key: "rzp_test_4odxRBeuS0ffml",
             currency: orderResponse.data.message.currency,
             amount: `${orderResponse.data.message.amount}`,
             order_id: orderResponse.data.message.id,
@@ -66,6 +68,8 @@ export async function buyArtImage(token, artImages, userDetails, navigate, dispa
                 verifyPayment({ ...response, artImages }, token, navigate, dispatch);
             }
         }
+        console.log("PRINTING options", options);
+
         //miss hogya tha 
         const paymentObject = new window.Razorpay(options);
         paymentObject.open();

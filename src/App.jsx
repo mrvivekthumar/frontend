@@ -16,10 +16,11 @@ import PrivateRoute from "../src/components/core/Auth/PrivateRoute"
 import MyProfile from './components/core/Dashboard/MyProfile'
 import Settings from './components/core/Dashboard/Settings'
 import Cart from './components/core/Dashboard/Cart'
-import EnrolledCourses from './components/core/Dashboard/EnrolledArtImages'
+import EnrolledArtImages from './components/core/Dashboard/EnrolledArtImages'
 import { useSelector } from 'react-redux'
 import { ACCOUNT_TYPE } from "./utils/constants";
 import Catalog from './pages/Catalog'
+import ArtImageDetails from './pages/ArtImageDetails'
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="catalog/:catalogName" element={<Catalog />} />
-        {/* <Route path="courses/:courseId" element={<CourseDetails />} /> */}
+        <Route path="artImages/:artImageId" element={<ArtImageDetails />} />
 
         <Route
           path="signup"
@@ -101,7 +102,7 @@ function App() {
             user?.accountType === ACCOUNT_TYPE.BUYER && (
               <>
                 <Route path="dashboard/cart" element={<Cart />} />
-                <Route path="dashboard/enrolled-courses" element={<EnrolledCourses />} />
+                <Route path="dashboard/enrolled-artImages" element={<EnrolledArtImages />} />
               </>
             )
           }
@@ -110,9 +111,9 @@ function App() {
             user?.accountType === ACCOUNT_TYPE.ARTIST && (
               <>
                 <Route path="dashboard/instructor" element={<Instructor />} />
-                <Route path="dashboard/add-images" element={<AddCourse />} />
-                <Route path="dashboard/my-images" element={<MyCourses />} />
-                <Route path="dashboard/edit-course/:courseId" element={<EditCourse />} />
+                <Route path="dashboard/add-images" element={<AddArtImage />} />
+                <Route path="dashboard/my-images" element={<MyArtImages />} />
+                <Route path="dashboard/edit-artImage/:artImageId" element={<EditArtImage />} />
 
               </>
             )
@@ -124,7 +125,7 @@ function App() {
 
         {/* <Route element={
           <PrivateRoute>
-            <ViewCourse />
+            <ViewArtImage />
           </PrivateRoute>
         }>
 
@@ -132,7 +133,7 @@ function App() {
             user?.accountType === ACCOUNT_TYPE.STUDENT && (
               <>
                 <Route
-                  path="view-course/:courseId/section/:sectionId/sub-section/:subSectionId"
+                  path="view-artImage/:artImageId/section/:sectionId/sub-section/:subSectionId"
                   element={<VideoDetails />}
                 />
               </>

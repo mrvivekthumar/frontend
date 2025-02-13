@@ -8,7 +8,7 @@ const initialState = {
 }
 
 const artImageSlice = createSlice({
-    name: "course",
+    name: "artImage",
     initialState,
     reducers: {
         setStep: (state, action) => {
