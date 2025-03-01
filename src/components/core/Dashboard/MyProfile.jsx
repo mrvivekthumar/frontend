@@ -8,6 +8,7 @@ export default function MyProfile() {
     const { user } = useSelector((state) => state.profile)
     const navigate = useNavigate()
 
+    console.log(user);
     return (
         <>
             {/* Section 1 */}
@@ -20,12 +21,12 @@ export default function MyProfile() {
                 <div className="flex md:flex-row flex-col items-center gap-x-4">
                     <img
                         src={user?.image}
-                        alt={`profile-${user?.firstName}`}
+                        alt={`profile-${user?.firstname}`}
                         className="aspect-square  mx-auto md:m-0 w-[78px] rounded-full object-cover"
                     />
                     <div className="space-y-1 mt-3 md:mt-0 text-center md:text-left">
                         <p className="text-lg font-semibold text-richblack-5">
-                            {user?.firstName + " " + user?.lastName}
+                            {user?.firstname + " " + user?.lastname}
                         </p>
                         <p className="text-sm text-richblack-300">{user?.email}</p>
                     </div>
@@ -76,7 +77,7 @@ export default function MyProfile() {
                         <div>
                             <p className="mb-2 text-sm text-richblack-600">First Name</p>
                             <p className="text-sm font-medium text-richblack-5">
-                                {user?.firstName}
+                                {user?.firstname}
                             </p>
                         </div>
                         <div>
@@ -96,7 +97,7 @@ export default function MyProfile() {
                         <div>
                             <p className="mb-2 text-sm text-richblack-600">Last Name</p>
                             <p className="text-sm font-medium text-richblack-5">
-                                {user?.lastName}
+                                {user?.lastname}
                             </p>
                         </div>
                         <div>

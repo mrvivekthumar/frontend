@@ -105,6 +105,7 @@ async function sendPaymentSuccessEmail(response, amount, token) {
 async function verifyPayment(bodyData, token, navigate, dispatch) {
     const toastId = toast.loading("Verifying Payment....");
     dispatch(setPaymentLoading(true));
+    console.log("PRINTING bodyData", bodyData);
     try {
         const response = await apiConnector("POST", ARTIMAGE_VERIFY_API, bodyData, {
             Authorization: `Bearer ${token}`,

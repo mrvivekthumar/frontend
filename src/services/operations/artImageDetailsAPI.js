@@ -259,19 +259,19 @@ export const fetchArtistArtImages = async (token) => {
     try {
         const response = await apiConnector(
             "GET",
-            GET_ALL_INSTRUCTOR_COURSES_API,
+            GET_ALL_ARTIST_ARTIMAGE_API,
             null,
             {
                 Authorization: `Bearer ${token}`,
             }
         )
-        console.log("INSTRUCTOR COURSES API RESPONSE............", response)
+        console.log("GET_ALL_ARTIST_ARTIMAGE_API RESPONSE............", response)
         if (!response?.data?.success) {
             throw new Error("Could Not Fetch Artist ArtImages")
         }
         result = response?.data?.data
     } catch (error) {
-        console.log("INSTRUCTOR COURSES API ERROR............", error)
+        console.log("GET_ALL_ARTIST_ARTIMAGE_API ERROR............", error)
         toast.error(error.message)
     }
     toast.dismiss(toastId)

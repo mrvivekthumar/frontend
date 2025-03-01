@@ -15,23 +15,23 @@ export const sidebarLinks = [
     },
     {
         id: 3,
-        name: "My Courses",
+        name: "My ArtImages",
         path: "/dashboard/my-images",
         type: ACCOUNT_TYPE.ARTIST,
         icon: "VscVm",
     },
     {
         id: 4,
-        name: "Add Courses",
+        name: "Add ArtImages",
         path: "/dashboard/add-images",
         type: ACCOUNT_TYPE.ARTIST,
         icon: "VscAdd",
     },
     {
         id: 5,
-        name: "Enrolled Courses",
-        path: "/dashboard/enrolled-courses",
-        type: ACCOUNT_TYPE.STUDENT,
+        name: "Enrolled ArtImages",
+        path: "/dashboard/enrolled-artImages",
+        type: ACCOUNT_TYPE.BUYER,
         icon: "VscMortarBoard",
     },
     {

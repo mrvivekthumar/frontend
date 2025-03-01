@@ -28,7 +28,7 @@ function ArtImageDetailsCard({ artImage, setConfirmationModal, handleBuyArtImage
 
     const handleAddToCart = () => {
         if (user && user?.accountType === ACCOUNT_TYPE.ARTIST) {
-            toast.error("You are an Instructor. You can't buy a artImage.")
+            toast.error("You are an Artist. You can't buy a artImage.")
             return
         }
         if (token) {
@@ -45,7 +45,7 @@ function ArtImageDetailsCard({ artImage, setConfirmationModal, handleBuyArtImage
         })
     }
 
-    // console.log("Student already enrolled ", artImage?.buyerssEnroled, user?._id)
+    // console.log("Buyer already enrolled ", artImage?.buyerssEnroled, user?._id)
     const formattedPrice = isNaN(CurrentPrice) ? "Price not available" : `Rs. ${CurrentPrice}`;
 
 

@@ -13,7 +13,7 @@ export const endpoints = {
 // PROFILE ENDPOINTS
 export const profileEndpoints = {
     GET_USER_DETAILS_API: BASE_URL + "/profile/getUserDetails",
-    // GET_USER_ENROLLED_ARTIMAGES_API: BASE_URL + "/profile/getEnrolledArtImages",
+    GET_USER_ENROLLED_ARTIMAGES_API: BASE_URL + "/profile/getEnrolledArtImages",
     GET_ARTIST_DATA_API: BASE_URL + "/profile/artistDashboard",
 }
 

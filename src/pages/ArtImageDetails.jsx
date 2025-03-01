@@ -57,7 +57,7 @@ function ArtImageDetails() {
 
     // Collapse all
     // const [collapse, setCollapse] = useState("");
-    
+
     const [isActive, setIsActive] = useState(Array(0))
     const handleActive = (id) => {
         // console.log("called", id)
@@ -122,6 +122,8 @@ function ArtImageDetails() {
             </div>
         )
     }
+
+    console.log("Artist Details : ", artist);
 
     return (
         <>
