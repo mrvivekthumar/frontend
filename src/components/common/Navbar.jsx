@@ -95,7 +95,7 @@ function Navbar() {
                                                             ))}
                                                     </>
                                                 ) : (
-                                                    <p className="text-center">No Courses Found</p>
+                                                    <p className="text-center">No ArtImages Found</p>
                                                 )}
                                             </div>
                                         </div>

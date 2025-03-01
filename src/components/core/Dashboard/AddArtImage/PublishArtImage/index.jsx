@@ -17,6 +17,8 @@ export default function PublishArtImage() {
     const { artImage } = useSelector((state) => state.artImage)
     const [loading, setLoading] = useState(false)
 
+    console.log("inside index of publicsh : ", artImage)
+
     useEffect(() => {
         if (artImage?.status === ARTIMAGES_STATUS.PUBLISHED) {
             setValue("public", true)
@@ -24,12 +26,12 @@ export default function PublishArtImage() {
     }, [])
 
     const goBack = () => {
-        dispatch(setStep(2))
+        dispatch(setStep(1))
     }
 
     const goToArtImages = () => {
         dispatch(resetArtImageState())
-        navigate("/dashboard/my-artImages")
+        navigate("/dashboard/my-images")
     }
 
     const handleArtImagePublish = async () => {
@@ -46,6 +48,7 @@ export default function PublishArtImage() {
         }
         const formData = new FormData()
         formData.append("artImageId", artImage._id)
+        console.log(artImage._id);
         const artImageStatus = getValues("public")
             ? ARTIMAGES_STATUS.PUBLISHED
             : ARTIMAGES_STATUS.DRAFT

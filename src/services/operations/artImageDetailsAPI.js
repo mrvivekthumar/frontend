@@ -103,18 +103,18 @@ export const editArtImageDetails = async (data, token) => {
     let result = null
     const toastId = toast.loading("Loading...")
     try {
-        const response = await apiConnector("POST", EDIT_COURSE_API, data, {
+        const response = await apiConnector("POST", EDIT_ARTIMAGE_API, data, {
             "Content-Type": "multipart/form-data",
             Authorization: `Bearer ${token}`,
         })
-        console.log("EDIT COURSE API RESPONSE............", response)
+        console.log("EDIT_ARTIMAGE_API RESPONSE............", response)
         if (!response?.data?.success) {
             throw new Error("Could Not Update ArtImage Details")
         }
         toast.success("ArtImage Details Updated Successfully")
         result = response?.data?.data
     } catch (error) {
-        console.log("EDIT COURSE API ERROR............", error)
+        console.log("EDIT_ARTIMAGE_API ERROR............", error)
         toast.error(error.message)
     }
     toast.dismiss(toastId)
@@ -282,7 +282,7 @@ export const fetchArtistArtImages = async (token) => {
 export const deleteArtImage = async (data, token) => {
     const toastId = toast.loading("Loading...")
     try {
-        const response = await apiConnector("DELETE", DELETE_COURSE_API, data, {
+        const response = await apiConnector("DELETE", DELETE_ARTIMAGE_API, data, {
             Authorization: `Bearer ${token}`,
         })
         console.log("DELETE COURSE API RESPONSE............", response)
@@ -305,7 +305,7 @@ export const getFullDetailsOfArtImage = async (artImageId, token) => {
     try {
         const response = await apiConnector(
             "POST",
-            GET_FULL_COURSE_DETAILS_AUTHENTICATED,
+            ARTIMAGE_DETAILS_API,
             {
                 artImageId,
             },
@@ -313,16 +313,16 @@ export const getFullDetailsOfArtImage = async (artImageId, token) => {
                 Authorization: `Bearer ${token}`,
             }
         )
-        console.log("COURSE_FULL_DETAILS_API API RESPONSE............", response)
+        console.log("ARTIMAGE_DETAILS_API API RESPONSE............", response)
 
         if (!response.data.success) {
             throw new Error(response.data.message)
         }
         result = response?.data?.data
     } catch (error) {
-        console.log("COURSE_FULL_DETAILS_API API ERROR............", error)
+        console.log("ARTIMAGE_DETAILS_API API ERROR............", error)
         result = error.response.data
-        // toast.error(error.response.data.message);
+        toast.error(error.response.data.message);
     }
     toast.dismiss(toastId)
     //   dispatch(setLoading(false));

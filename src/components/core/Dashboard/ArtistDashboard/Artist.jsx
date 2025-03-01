@@ -91,7 +91,7 @@ export default function Artist() {
                         {/* Render 3 artImages */}
                         <div className="flex items-center justify-between">
                             <p className="text-lg font-bold text-richblack-5">Your ArtImages</p>
-                            <Link to="/dashboard/my-artImages">
+                            <Link to="/dashboard/my-images">
                                 <p className="text-xs font-semibold text-yellow-50">View All</p>
                             </Link>
                         </div>

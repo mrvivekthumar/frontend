@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { HiOutlineCurrencyRupee } from "react-icons/hi";
+import { MdNavigateNext } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { MdNavigateNext } from "react-icons/md"
-import IconBtn from "../../../../common/IconBtn"
 import {
     addArtImageDetails,
     editArtImageDetails,
     fetchArtImageCategories,
 } from "../../../../../services/operations/artImageDetailsAPI";
-import { HiOutlineCurrencyRupee } from "react-icons/hi";
-import { BiUpload } from "react-icons/bi";
-import RequirementField from "./RequirementField";
-import { setStep, setArtImage } from "../../../../../slices/artImageSlice";
-import { ARTIMAGES_STATUS } from "../../../../../utils/constants";
+// import RequirementField from "./RequirementField";
 import { toast } from "react-hot-toast";
-import ChipInput from "./ChipInput";
+import { setArtImage, setStep } from "../../../../../slices/artImageSlice";
+import { ARTIMAGES_STATUS } from "../../../../../utils/constants";
+// import ChipInput from "./ChipInput";
 import Upload from "../Upload";
 
 const ArtImageInformationForm = () => {
@@ -32,6 +30,8 @@ const ArtImageInformationForm = () => {
     const { artImage, editArtImage } = useSelector((state) => state.artImage);
     const [loading, setLoading] = useState(false);
     const [artImageCategories, setArtImageCategories] = useState([]);
+    
+    console.log("ArtImage : : : ",artImage)
 
     useEffect(() => {
         const getCategories = async () => {
@@ -47,15 +47,16 @@ const ArtImageInformationForm = () => {
             setValue("artImageTitle", artImage.artImageName);
             setValue("artImageShortDesc", artImage.artImageDescription);
             setValue("artImagePrice", artImage.price);
-            setValue("artImageTags", artImage.tag);
-            setValue("artImageBenefits", artImage.whatYouWillLearn);
+            // setValue("artImageTags", artImage.tag);
+            // setValue("artImageBenefits", artImage.whatYouWillLearn);
             setValue("artImageCategory", artImage.category);
-            setValue("artImageRequirements", artImage.instructions);
-            setValue("artImageImage", artImage.thumbnail);
+            // setValue("artImageRequirements", artImage.instructions);
+            setValue("artImage", artImage.artImage);
         }
 
         getCategories();
     }, []);
+
 
     const isFormUpdated = () => {
         const currentValues = getValues();
@@ -63,12 +64,11 @@ const ArtImageInformationForm = () => {
             currentValues.artImageTitle !== artImage.artImageName ||
             currentValues.artImageShortDesc !== artImage.artImageDescription ||
             currentValues.artImagePrice !== artImage.price ||
-            currentValues.artImageTags.toString() !== artImage.tag.toString() ||
-            currentValues.artImageBenefits !== artImage.whatYouWillLearn ||
+            // currentValues.artImageTags.toString() !== artImage.tag.toString() ||
+            // currentValues.artImageBenefits !== artImage.whatYouWillLearn ||
             currentValues.artImageCategory._id !== artImage.category._id ||
-            currentValues.artImageImage !== artImage.thumbnail ||
-            currentValues.artImageRequirements.toString() !==
-            artImage.instructions.toString()
+            currentValues.artImage !== artImage.artImage
+            // currentValues.artImageRequirements.toString() !== artImage.instructions.toString()
         )
             return true;
         else return false;
@@ -94,30 +94,30 @@ const ArtImageInformationForm = () => {
                     formData.append("price", data.artImagePrice);
                 }
 
-                if (currentValues.artImageTags.toString() !== artImage.tag.toString()) {
-                    formData.append("tag", JSON.stringify(data.artImageTags));
-                }
+                // if (currentValues.artImageTags.toString() !== artImage.tag.toString()) {
+                //     formData.append("tag", JSON.stringify(data.artImageTags));
+                // }
 
-                if (currentValues.artImageBenefits !== artImage.whatYouWillLearn) {
-                    formData.append("whatYouWillLearn", data.artImageBenefits);
-                }
+                // if (currentValues.artImageBenefits !== artImage.whatYouWillLearn) {
+                //     formData.append("whatYouWillLearn", data.artImageBenefits);
+                // }
 
                 if (currentValues.artImageCategory._id !== artImage.category._id) {
                     formData.append("category", data.artImageCategory);
                 }
 
-                if (
-                    currentValues.artImageRequirements.toString() !==
-                    artImage.instructions.toString()
-                ) {
-                    formData.append(
-                        "instructions",
-                        JSON.stringify(data.artImageRequirements)
-                    );
-                }
+                // if (
+                //     currentValues.artImageRequirements.toString() !==
+                //     artImage.instructions.toString()
+                // ) {
+                //     formData.append(
+                //         "instructions",
+                //         JSON.stringify(data.artImageRequirements)
+                //     );
+                // }
 
-                if (currentValues.artImageImage !== artImage.thumbnail) {
-                    formData.append("thumbnailImage", data.artImageImage);
+                if (currentValues.artImage !== artImage.artImage) {
+                    formData.append("artImage", data.artImage);
                 }
 
                 setLoading(true);
@@ -141,12 +141,12 @@ const ArtImageInformationForm = () => {
         formData.append("artImageName", data.artImageTitle);
         formData.append("artImageDescription", data.artImageShortDesc);
         formData.append("price", data.artImagePrice);
-        formData.append("whatYouWillLearn", data.artImageBenefits);
+        // formData.append("whatYouWillLearn", data.artImageBenefits);
         formData.append("category", data.artImageCategory);
         formData.append("instructions", JSON.stringify(data.artImageRequirements));
         formData.append("status", ARTIMAGES_STATUS.DRAFT);
-        formData.append("tag", JSON.stringify(data.artImageTags));
-        formData.append("thumbnailImage", data.artImageImage);
+        // formData.append("tag", JSON.stringify(data.artImageTags));
+        formData.append("artImage", data.artImage);
 
         setLoading(true);
         console.log("BEFORE add artImage API call");
@@ -241,7 +241,7 @@ const ArtImageInformationForm = () => {
             </div>
 
             {/* create a custom component for handling tags input */}
-            <ChipInput
+            {/* <ChipInput
                 label="Tags"
                 name="artImageTags"
                 placeholder="Enter Tags and press Enter"
@@ -249,20 +249,20 @@ const ArtImageInformationForm = () => {
                 errors={errors}
                 setValue={setValue}
                 getValues={getValues}
-            />
+            /> */}
 
             {/* create a component for uploading and showing preview of media */}
             <Upload
-                name="artImageImage"
+                name="artImage"
                 label="ArtImage Thumbnail"
                 register={register}
                 setValue={setValue}
                 errors={errors}
-                editData={editArtImage ? artImage?.thumbnail : null}
+                editData={editArtImage ? artImage?.artImage : null}
             />
 
             {/*     Benefits of the ArtImage */}
-            <div className="text-richblack-100">
+            {/* <div className="text-richblack-100">
                 <label>
                     Benefits of the artImage<sup>*</sup>
                 </label>
@@ -275,16 +275,17 @@ const ArtImageInformationForm = () => {
                 {errors.artImageBenefits && (
                     <span>Benefits of the artImage are required**</span>
                 )}
-            </div>
+            </div> */}
 
-            <RequirementField
+            {/* <RequirementField
                 name="artImageRequirements"
                 label="Requirements/Instructions"
                 register={register}
                 errors={errors}
                 setValue={setValue}
                 getValues={getValues}
-            />
+            /> */}
+
             <div className="flex gap-x-2">
                 {editArtImage && (
                     <button

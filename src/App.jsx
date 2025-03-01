@@ -24,6 +24,7 @@ import ArtImageDetails from './pages/ArtImageDetails'
 import Artist from './components/core/Dashboard/ArtistDashboard/Artist'
 import MyArtImages from './components/core/Dashboard/MyArtImages'
 import AddArtImage from './components/core/Dashboard/AddArtImage'
+import EditArtImage from './components/core/Dashboard/EditArtImage'
 
 
 function App() {
@@ -116,7 +117,7 @@ function App() {
                 <Route path="dashboard/artist" element={<Artist />} />
                 <Route path="dashboard/add-images" element={<AddArtImage />} />
                 <Route path="dashboard/my-images" element={<MyArtImages />} />
-                {/* <Route path="dashboard/edit-artImage/:artImageId" element={<EditArtImage />} /> */}
+                <Route path="dashboard/edit-artImage/:artImageId" element={<EditArtImage />} />
 
               </>
             )

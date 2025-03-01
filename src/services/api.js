@@ -28,12 +28,12 @@ export const buyerEndpoints = {
 export const artImageEndpoints = {
 
     CREATE_ARTIMAGE_API: BASE_URL + "/artImages/createArtImage",
-    EDIT_ARTIMAGE_API: BASE_URL + "/artImages/editArtImages",
-    DELETE_ARTIMAGE_API: BASE_URL + "/artImages/deleteArtistImages",
+    EDIT_ARTIMAGE_API: BASE_URL + "/artImages/editArtImage",
+    DELETE_ARTIMAGE_API: BASE_URL + "/artImages/deleteArtistImage",
     GET_ALL_ARTIMAGE_API: BASE_URL + "/artImages/getAllArtImages",
     ARTIMAGE_API: BASE_URL + "/artImages/getArtImage",
     ARTIMAGE_DETAILS_API: BASE_URL + "/artImages/getArtImageDetails",
-    ARTIMAGE_CATEGORIES_API: BASE_URL + "/artImagess/showAllCategories",
+    ARTIMAGE_CATEGORIES_API: BASE_URL + "/artImages/showAllCategories",
 
     // CREATE_SECTION_API: BASE_URL + "/artImages/addSection",
     // CREATE_SUBSECTION_API: BASE_URL + "/artImages/addSubSection",

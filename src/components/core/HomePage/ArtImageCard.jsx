@@ -4,7 +4,7 @@ import React from "react";
 import { HiUsers } from "react-icons/hi";
 import { ImTree } from "react-icons/im";
 
-const CourseCard = ({ cardData, setCurrentCard }) => {
+const ArtImageCard = ({ cardData, setCurrentCard }) => {
   return (
     <div
       className={`w-[360px] lg:w-[30%] bg-richblack-800 text-richblack-25 h-[300px] box-border cursor-pointer transform transition-transform duration-400 ease-in-out hover:scale-105 hover:bg-white hover:shadow-[12px_12px_0_0] hover:shadow-yellow-600 hover:text-richblack-800`}
@@ -39,4 +39,4 @@ const CourseCard = ({ cardData, setCurrentCard }) => {
   );
 };
 
-export default CourseCard;
+export default ArtImageCard;
