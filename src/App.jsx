@@ -25,6 +25,8 @@ import Artist from './components/core/Dashboard/ArtistDashboard/Artist'
 import MyArtImages from './components/core/Dashboard/MyArtImages'
 import AddArtImage from './components/core/Dashboard/AddArtImage'
 import EditArtImage from './components/core/Dashboard/EditArtImage'
+import ViewArtImage from './pages/ViewArtImage'
+import VideoDetails from './components/core/VieArtImage/VideoDetails'
 
 
 function App() {
@@ -127,7 +129,7 @@ function App() {
         </Route>
 
 
-        {/* <Route element={
+        <Route element={
           <PrivateRoute>
             <ViewArtImage />
           </PrivateRoute>
@@ -144,7 +146,7 @@ function App() {
             )
           }
 
-        </Route> */}
+        </Route>
 
 
 

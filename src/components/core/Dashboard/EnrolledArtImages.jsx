@@ -24,6 +24,7 @@ export default function EnrolledArtImages() {
         getEnrolledArtImages();
     }, [])
 
+    console.log("PRINTING enrolledArtImages", enrolledArtImages);
     return (
         <>
             <div className="text-3xl ml-12 md:ml-0 text-richblack-50">Enrolled ArtImages</div>
@@ -47,6 +48,7 @@ export default function EnrolledArtImages() {
 
                     {/* ArtImage Names */}
 
+
                     {enrolledArtImages.map((artImage, i, arr) => (
                         <div
                             className={`flex items-center border border-richblack-700 ${i === arr.length - 1 ? "rounded-b-lg" : "rounded-none"
@@ -62,7 +64,7 @@ export default function EnrolledArtImages() {
                                 }}
                             >
                                 <img
-                                    src={artImage.thumbnail}
+                                    src={artImage.artImage}
                                     alt="artImage_img"
                                     className="md:h-14 md:w-14 w-[120px] rounded-lg object-cover"
                                 />
@@ -76,14 +78,14 @@ export default function EnrolledArtImages() {
                                 </div>
                             </div>
                             <div className="w-1/4 px-2 py-3">{artImage?.totalDuration}</div>
-                            <div className="flex w-1/5 flex-col gap-2 px-2 py-3">
+                            {/* <div className="flex w-1/5 flex-col gap-2 px-2 py-3">
                                 <p>Progress: {artImage.progressPercentage || 0}%</p>
                                 <ProgressBar
                                     completed={artImage.progressPercentage || 0}
                                     height="8px"
                                     isLabelVisible={false}
                                 />
-                            </div>
+                            </div> */}
                         </div>
                     ))}
                 </div>

@@ -32,10 +32,25 @@ const About = () => {
                         </p>
                     </header>
                     <div className="sm:h-[70px] lg:h-[150px]"></div>
-                    <div className="absolute bottom-0 left-[50%] grid w-[100%] translate-x-[-50%] translate-y-[30%] grid-cols-3 gap-3 lg:gap-5">
-                        <img data-aos="flip-right" src={BannerImage1} alt="" />
-                        <img data-aos="flip-right" src={BannerImage2} alt="" />
-                        <img data-aos="flip-right" src={BannerImage3} alt="" />
+                    <div className="absolute bottom-0 left-[50%] w-full translate-x-[-45%] translate-y-[30%] grid grid-cols-3 gap-2 lg:gap-4 p-3 lg:p-5 ml-4 lg:ml-10">
+                        <img
+                            data-aos="flip-right"
+                            src={BannerImage1}
+                            alt=""
+                            className="object-cover w-[220px] h-[220px] lg:w-[300px] lg:h-[300px]"
+                        />
+                        <img
+                            data-aos="flip-right"
+                            src={BannerImage2}
+                            alt=""
+                            className="object-cover w-[220px] h-[220px] lg:w-[300px] lg:h-[300px]"
+                        />
+                        <img
+                            data-aos="flip-right"
+                            src={BannerImage3}
+                            alt=""
+                            className="object-cover w-[220px] h-[220px] lg:w-[300px] lg:h-[300px]"
+                        />
                     </div>
                 </div>
             </section>
@@ -67,8 +82,10 @@ const About = () => {
                             <img
                                 src={FoundingStory}
                                 alt=""
-                                className="shadow-[0_0_20px_0] shadow-[#FC6767]"
+                                className="w-[350px] h-[250px] lg:w-[500px] lg:h-[300px] object-contain shadow-[0_0_20px_0] shadow-[#FC6767]"
                             />
+
+
                         </div>
                     </div>
                     <div className="flex flex-col items-center lg:gap-10 lg:flex-row justify-between">

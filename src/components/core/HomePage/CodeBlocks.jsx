@@ -2,6 +2,7 @@ import React from "react";
 import CTAButton from "./Button";
 import { TypeAnimation } from "react-type-animation";
 import { FaArrowRight } from "react-icons/fa";
+import Bird from "../../../assets/Images/Bird.png";
 
 const CodeBlocks = ({
     position,
@@ -9,7 +10,7 @@ const CodeBlocks = ({
     subheading,
     ctabtn1,
     ctabtn2,
-    codeblock,
+    imageSrc,
     backgroundGradient,
     codeColor,
 }) => {
@@ -47,8 +48,8 @@ const CodeBlocks = ({
                 {/* Image Section */}
                 <div className="w-full flex justify-center items-center">
                     <img
-                        src="your-image-url-here"
-                        alt="Descriptive Text"
+                        src={imageSrc}
+                        alt="Showcase"
                         className="w-full h-auto object-cover"
                     />
                 </div>

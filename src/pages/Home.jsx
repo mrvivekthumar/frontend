@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Banner from "../assets/Images/banner.mp4"
+import BOXOFFICE from "../assets/Images/boxoffice.png"
 import Footer from "../components/common/Footer"
 import CTAButton from "../components/core/HomePage/Button"
 import CodeBlocks from "../components/core/HomePage/CodeBlocks"
@@ -12,6 +13,8 @@ import HighlightText from "../components/core/HomePage/HighlightText"
 import InstructorSection from "../components/core/HomePage/InstructorSection"
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
 import TimelineSection from "../components/core/HomePage/TimelineSection"
+import HomeImage1 from "../assets/Images/HomeImage1.png"
+import HomeImage2 from "../assets/Images/HomeImage2.png"
 
 function Home() {
     useEffect(() => {
@@ -65,13 +68,7 @@ function Home() {
 
                 {/* Video */}
                 <div data-aos="flip-right" className="mx-3 my-7 shadow-[10px_-5px_50px_-5px] shadow-blue-200">
-                    <video
-                        muted
-                        loop
-                        autoPlay
-                    >
-                        <source src={Banner} type="video/mp4" />
-                    </video>
+                    <img src={BOXOFFICE} alt="Banner" className="w-full h-auto" />
                 </div>
 
                 {/* Code Section 1  */}
@@ -99,7 +96,7 @@ function Home() {
                             active: false,
                         }}
                         codeColor={"text-yellow-25"}
-                        codeblock={`<!DOCTYPE html>\n <html lang="en">\n<head>\n<title>This is myPage</title>\n</head>\n<body>\n<h1><a href="/">Header</a></h1>\n<nav> <a href="/one">One</a> <a href="/two">Two</a> <a href="/three">Three</a>\n</nav>\n</body>`}
+                        imageSrc={HomeImage1}
                         backgroundGradient={<div className="codeblock1 absolute"></div>}
                     />
                 </div>
@@ -128,7 +125,7 @@ function Home() {
                             active: false,
                         }}
                         codeColor={"text-white"}
-                        codeblock={`import React from "react";\n import CTAButton from "./Button";\nimport TypeAnimation from "react-type";\nimport { FaArrowRight } from "react-icons/fa";\n\nconst Home = () => {\nreturn (\n<div>Home</div>\n)\n}\nexport default Home;`}
+                        imageSrc={HomeImage2}
                         backgroundGradient={<div className="codeblock2 absolute"></div>}
                     />
                 </div>
