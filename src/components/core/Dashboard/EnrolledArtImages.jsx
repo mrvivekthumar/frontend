@@ -57,11 +57,11 @@ export default function EnrolledArtImages() {
                         >
                             <div
                                 className="flex md:flex-row flex-col w-[45%] cursor-pointer items-center gap-4 px-5 py-3"
-                                onClick={() => {
-                                    navigate(
-                                        `/view-artImage/${artImage?._id}/section/${artImage.artImageContent?.[0]?._id}/sub-section/${artImage.artImageContent?.[0]?.subSection?.[0]?._id}`
-                                    )
-                                }}
+                                // onClick={() => {
+                                //     navigate(
+                                //         `/view-artImage/${artImage?._id}/section/${artImage.artImageContent?.[0]?._id}/sub-section/${artImage.artImageContent?.[0]?.subSection?.[0]?._id}`
+                                //     )
+                                // }}
                             >
                                 <img
                                     src={artImage.artImage}

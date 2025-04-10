@@ -23,6 +23,7 @@ export default function MyArtImages() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    console.log("Result is : ",artImages);
     return (
         <div>
             <div className="mb-14 flex w-full items-center justify-between">

@@ -156,7 +156,7 @@ function ArtImageDetails() {
                             </div>
                             <div>
                                 <p className="">
-                                    Created By {`${artist.firstName} ${artist.lastName}`}
+                                    Created By {`${artist.firstname} ${artist.lastname}`}
                                 </p>
                             </div>
                             <div className="flex flex-wrap gap-5 text-lg">
@@ -195,22 +195,22 @@ function ArtImageDetails() {
             <div className="mx-auto box-content px-4 text-start text-richblack-5 lg:w-[1260px]">
                 <div className="mx-auto max-w-maxContentTab lg:mx-0 xl:max-w-[810px]">
                     {/* What will you learn section */}
-                    <div className="my-8 border border-richblack-600 p-8">
+                    {/* <div className="my-8 border border-richblack-600 p-8">
                         <p className="text-3xl font-semibold">What you'll learn</p>
                         <div className="mt-5">
-                            {/* <Markdown>{whatYouWillLearn}</Markdown> */}
+                            <Markdown>{whatYouWillLearn}</Markdown>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* ArtImage Content Section */}
                     <div className="max-w-[830px] ">
-                        <div className="flex flex-col gap-3">
+                        {/* <div className="flex flex-col gap-3">
                             <p className="text-[28px] font-semibold">ArtImage Content</p>
                             <div className="flex flex-wrap justify-between gap-2">
                                 <div className="flex gap-2">
-                                    {/* <span>
+                                    <span>
                                         {artImageContent?.length || "length"} {`section(s)`}
-                                    </span> */}
+                                    </span>
                                     <span>
                                         {totalNoOfLectures} {`lecture(s)`}
                                     </span>
@@ -225,19 +225,19 @@ function ArtImageDetails() {
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
-                        {/* ArtImage Details Accordion */}
+                        {/* ArtImage Details Accordion
                         <div className="py-4">
-                            {/* {artImageContent?.map((artImage, index) => (
+                            {artImageContent?.map((artImage, index) => (
                                 <ArtImageAccordionBar
                                     artImage={artImage}
                                     key={index}
                                     isActive={isActive}
                                     handleActive={handleActive}
                                 />
-                            ))} */}
-                        </div>
+                            ))}
+                        </div> */}
 
                         {/* Author Details */}
                         <div className="mb-12 py-4">
@@ -247,12 +247,12 @@ function ArtImageDetails() {
                                     src={
                                         artist.image
                                             ? artist.image
-                                            : `https://api.dicebear.com/5.x/initials/svg?seed=${artist.firstName} ${artist.lastName}`
+                                            : `https://api.dicebear.com/5.x/initials/svg?seed=${artist.firstname} ${artist.lastname}`
                                     }
                                     alt="Author"
                                     className="h-14 w-14 rounded-full object-cover"
                                 />
-                                <p className="text-lg">{`${artist.firstName} ${artist.lastName}`}</p>
+                                <p className="text-lg">{`${artist.firstname} ${artist.lastname}`}</p>
                             </div>
                             <p className="text-richblack-50">
                                 {artist?.additionalDetails?.about}

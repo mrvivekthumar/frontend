@@ -18,7 +18,7 @@ export default function RenderCartArtImages() {
                 >
                     <div className="flex flex-1 flex-col gap-4 xl:flex-row">
                         <img
-                            src={artImage?.thumbnail}
+                            src={artImage?.artImage}
                             alt={artImage?.artImageName}
                             className="h-[148px] w-[220px] rounded-lg object-cover"
                         />
@@ -30,7 +30,7 @@ export default function RenderCartArtImages() {
                                 {artImage?.category?.name}
                             </p>
                             <div className="flex items-center gap-2">
-                                <span className="text-yellow-5">4.5</span>
+                                {/* <span className="text-yellow-5">4.5</span> */}
                                 <ReactStars
                                     count={5}
                                     value={artImage?.ratingAndReviews?.length}

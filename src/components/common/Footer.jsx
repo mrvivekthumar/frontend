@@ -12,16 +12,16 @@ const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
 const Resources = [
     "Art Articles",
     "Art Blog",
-    "Art Exhibitions",
-    "Art Tutorials",
-    "Art Docs",
-    "Gallery",
-    "Projects",
-    "Art Videos",
-    "Workshops",
+    // "Art Exhibitions",
+    // "Art Tutorials",
+    // "Art Docs",
+    // "Gallery",
+    // "Projects",
+    // "Art Videos",
+    // "Workshops",
 ];
-const Plans = ["Memberships", "For Artists", "Art Business Solutions"];
-const Community = ["Art Forums", "Art Chapters", "Art Events"];
+const Plans = ["Memberships"];
+const Community = ["Art Forums"];
 
 const Footer = () => {
     return (
@@ -36,7 +36,7 @@ const Footer = () => {
                                 Company
                             </h1>
                             <div className="flex flex-col gap-2">
-                                {["About", "Careers", "Affiliates"].map((ele, i) => {
+                                {["About"].map((ele, i) => {
                                     return (
                                         <div
                                             key={i}
@@ -59,7 +59,6 @@ const Footer = () => {
                             <h1 className="text-richblack-50 font-semibold text-[16px]">
                                 Resources
                             </h1>
-
                             <div className="flex flex-col gap-2 mt-2">
                                 {Resources.map((ele, index) => {
                                     return (

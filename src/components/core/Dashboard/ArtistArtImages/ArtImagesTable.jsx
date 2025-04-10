@@ -69,7 +69,7 @@ export default function ArtImagesTable({ artImages, setArtImages }) {
                             >
                                 <Td className="flex flex-1 gap-x-4 w-[100%]">
                                     <img
-                                        src={artImage?.thumbnail}
+                                        src={artImage?.artImage}
                                         alt={artImage?.artImageName}
                                         className="h-[148px] w-[220px] rounded-lg object-cover"
                                     />
