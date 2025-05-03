@@ -6,13 +6,13 @@ export const sidebarLinks = [
         path: "/dashboard/my-profile",
         icon: "VscAccount",
     },
-    {
-        id: 2,
-        name: "Dashboard",
-        path: "/dashboard/artist",
-        type: ACCOUNT_TYPE.ARTIST,
-        icon: "VscDashboard",
-    },
+    // {
+    //     id: 2,
+    //     name: "Dashboard",
+    //     path: "/dashboard/artist",
+    //     type: ACCOUNT_TYPE.ARTIST,
+    //     icon: "VscDashboard",
+    // },
     {
         id: 3,
         name: "My ArtImages",

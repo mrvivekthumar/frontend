@@ -1,12 +1,10 @@
 import { toast } from "react-hot-toast";
 import { buyerEndpoints } from "../api";
 import { apiConnector } from "../apiConnector";
-import rzpLogo from "../../assets/Logo/rzp_logo.png"
+import rzpLogo from "../../assets/Logo/Logo.png"
 import { setPaymentLoading } from "../../slices/artImageSlice";
 import { resetCart } from "../../slices/cartSlice";
 import.meta.env.RAZORPAY_KEY
-
-
 
 const { ARTIMAGE_PAYMENT_API, ARTIMAGE_VERIFY_API, SEND_PAYMENT_SUCCESS_EMAIL_API } = buyerEndpoints;
 
@@ -54,7 +52,7 @@ export async function buyArtImage(token, artImages, userDetails, navigate, dispa
             currency: orderResponse.data.message.currency,
             amount: `${orderResponse.data.message.amount}`,
             order_id: orderResponse.data.message.id,
-            name: "StudyNotion",
+            name: "ArtSphere",
             description: "Thank You for Purchasing the ArtImage",
             image: rzpLogo,
             prefill: {

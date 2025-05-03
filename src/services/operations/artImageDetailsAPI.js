@@ -299,6 +299,7 @@ export const deleteArtImage = async (data, token) => {
 
 // get full details of a artImage
 export const getFullDetailsOfArtImage = async (artImageId, token) => {
+    console.log("INside get Full Details of ARtImgae", artImageId, token);
     const toastId = toast.loading("Loading...")
     //   dispatch(setLoading(true));
     let result = null

@@ -135,7 +135,7 @@ function App() {
           </PrivateRoute>
         }>
 
-          {
+          {/* {
             user?.accountType === ACCOUNT_TYPE.STUDENT && (
               <>
                 <Route
@@ -144,7 +144,7 @@ function App() {
                 />
               </>
             )
-          }
+          } */}
 
         </Route>
 

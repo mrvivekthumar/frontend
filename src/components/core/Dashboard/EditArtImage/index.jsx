@@ -20,9 +20,10 @@ export default function EditArtImage() {
         ; (async () => {
             setLoading(true)
             const result = await getFullDetailsOfArtImage(artImageId, token)
-            if (result?.artImageDetails) {
+            console.log("Result : ", result);
+            if (result?.artImage) {
                 dispatch(setEditArtImage(true))
-                dispatch(setArtImage(result?.artImageDetails))
+                dispatch(setArtImage(result?.artImage))
             }
             setLoading(false)
         })()
